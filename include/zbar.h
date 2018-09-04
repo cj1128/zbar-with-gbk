@@ -147,6 +147,16 @@ typedef enum zbar_config_e {
 extern int zbar_version(unsigned *major,
                         unsigned *minor);
 
+/** consistently compute fourcc values across architectures
+ * (adapted from v4l2 specification)
+ * @since 0.11
+ */
+#define zbar_fourcc(a, b, c, d)                 \
+        ((unsigned long)(a) |                   \
+         ((unsigned long)(b) << 8) |            \
+         ((unsigned long)(c) << 16) |           \
+         ((unsigned long)(d) << 24))
+
 /** set global library debug level.
  * @param verbosity desired debug level.  higher values create more spew
  */
