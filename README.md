@@ -25,4 +25,5 @@ Now we get our new zbar library at `/tmp/local`.
 $ gcc -I/tmp/local/include -L/tmp/local/lib -lzbar -lpng test_zbar.c -o test_zbar
 $ ./test_zbar ./test.png
 decoded QR-Code symbol "你好"
+$ make distclean
 ```
